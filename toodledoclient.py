@@ -70,7 +70,9 @@ class ToodledoClient():
                 after = after_time,
                 before = before_time)
         print tasks
-        for task in tasks:
+        # todo:sort tasks
+        # for task in tasks:
+        for task in sorted(tasks, key = lambda t:(t.duedate, -t.priority)):
             ret_message += "%s !%d %%%s\n" % (task.title,
                     task.priority,
                     task.duedate)

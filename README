@@ -1,0 +1,10 @@
+Auther: BeanYoung
+email: guobasanxian@gmail.com
+
+#############################################################################
+How to run this robot:
+  1 Get your own toodledo account.
+  2 Register an app of toodledo.
+  3 Get your own Gtalk account.
+  4 Replace the information in robot.py
+  5 run robot.py

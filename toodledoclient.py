@@ -31,6 +31,8 @@ class ToodledoClient():
                 if context.title == task_condition['c']:
                     contextID = context.id 
 
+        print "contextID: %d\nfolderID: %d" % (contextID, folderID)
+
         if contextID != 0 and folderID != 0:
             tasks = self.client.getTasks(notcomp = 1,
                     folder = folderID,
@@ -40,7 +42,7 @@ class ToodledoClient():
         elif contextID == 0 and folderID != 0:
             tasks = self.client.getTasks(notcomp = 1, folder = folderID)
         else:
-            tasks = self.client.getTasks()
+            tasks = self.client.getTasks(notcomp = 1)
         ret_message = '' 
         print 'tasks types is :'
         print type(tasks)
